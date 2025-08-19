@@ -31,7 +31,6 @@ function FlyControls({ speed }: { speed: number }) {
     down: false,
   });
 
-  const velocity = useRef(new THREE.Vector3());
   const direction = useRef(new THREE.Vector3());
 
   useEffect(() => {

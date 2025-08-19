@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three.js Room Viewer</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (function(){
+        const s = document.createElement('script');
+        s.src = 'https://unpkg.com/meshoptimizer/meshopt_decoder.js';
+        s.async = true;
+        document.head.appendChild(s);
+      })();
+    </script>
+  </body>
+</html>

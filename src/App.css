@@ -1,0 +1,88 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app-root {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: #111;
+  color: #ddd;
+}
+
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0.75rem;
+  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0));
+  z-index: 100;
+  font-size: 14px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.controls label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0,0,0,0.35);
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+}
+
+.controls input[type="range"] {
+  width: 160px;
+}
+
+.controls .upload {
+  cursor: pointer;
+}
+.controls .upload input[type="file"] {
+  display: none;
+}
+
+.info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  color: #ddd;
+  font-size: 12px;
+  line-height: 1;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.has-tooltip {
+  position: relative;
+}
+
+.hint {
+  opacity: 0.8;
+}
+
+.dropzone {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.5);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  z-index: 10;
+}

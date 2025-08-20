@@ -13,15 +13,27 @@ html, body, #root {
   color: #ddd;
 }
 
+.ui-toggle {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  z-index: 110;
+  background: rgba(0,0,0,0.55);
+  color: #eee;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+}
+
 .topbar {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
   padding: 0.5rem 0.75rem;
   background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0));
   z-index: 100;
@@ -30,8 +42,13 @@ html, body, #root {
 
 .controls {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.5rem 1rem;
+}
+
+.controls br {
+  display: none;
 }
 
 .controls label {
@@ -43,8 +60,55 @@ html, body, #root {
   border-radius: 6px;
 }
 
+.controls label,
+.controls .triple-slider,
+.controls .env-presets {
+  flex: 1 1 260px;
+}
+
 .controls input[type="range"] {
   width: 160px;
+}
+.triple-slider {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 0.5rem;
+  row-gap: 0.25rem;
+  background: rgba(0,0,0,0.35);
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+}
+
+.triple-slider > span {
+  grid-column: 1 / -1;
+}
+
+.triple-slider label {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  padding: 0;
+}
+
+.env-presets {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.5rem;
+  background: rgba(0,0,0,0.35);
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+}
+
+.env-presets > span {
+  margin-right: 0.25rem;
+}
+
+.env-presets label {
+  margin-left: 0 !important;
 }
 
 .controls .upload {
